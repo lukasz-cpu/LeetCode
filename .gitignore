@@ -1,5 +1,5 @@
 ### IntelliJ IDEA ###
-out/
+LeetCode/out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
@@ -25,6 +25,8 @@ bin/
 ### VS Code ###
 .vscode/
 .idea/
+.out/
 
 ### Mac OS ###
 .DS_Store
+*.class
