@@ -64,3 +64,5 @@ public class ImplementQueueUsingStacks {
         }
     }
 }
+
+//O(1)ForPush,O(N)ForPopAndPeek,O(1)ForEmpty
