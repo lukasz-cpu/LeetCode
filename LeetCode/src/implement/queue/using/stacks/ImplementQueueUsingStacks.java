@@ -6,12 +6,20 @@ public class ImplementQueueUsingStacks {
     public static void main(String[] args) {
 
         int parameter = 1;
+        int parameter2 = 2;
+        int parameter3 = 3;
+        int parameter4 = 4;
+        int parameter5 = 5;
 
         MyQueue obj = new MyQueue();
         obj.push(parameter);
-        int param_2 = obj.pop();
-        int param_3 = obj.peek();
-        boolean param_4 = obj.empty();
+        obj.push(parameter2);
+        obj.push(parameter3);
+        obj.push(parameter4);
+        obj.push(parameter5);
+        int popResult = obj.pop();
+
+        System.out.println(popResult);
 
     }
 
