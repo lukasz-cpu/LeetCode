@@ -6,7 +6,6 @@ public class FindNumbersWith9Divisors {
         int N = 36;
         int count = 0;
 
-        // Sprawdzamy liczby od 1 do N
         for (int i = 1; i <= N; i++) {
             if (hasExactly9Divisors(i)) {
                 count++;
