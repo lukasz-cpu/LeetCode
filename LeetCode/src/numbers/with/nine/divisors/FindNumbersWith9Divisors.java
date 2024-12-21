@@ -9,62 +9,56 @@ import java.util.List;
 public class FindNumbersWith9Divisors {
 
     public static void main(String[] args) throws Exception {
-        int N = 10000000;
-        int numThreads = 120;
-        ExecutorService executor = Executors.newFixedThreadPool(numThreads);
-
+        int N = 1_000_000_0; // Zakres
         long startTime = System.nanoTime();
 
-        List<Future<Integer>> futures = new ArrayList<>();
-        int range = N / numThreads;
+        int count = countNumbersWith9DivisorsOptimized(N);
 
-        for (int i = 0; i < numThreads; i++) {
-            int start = i * range + 1;
-            int end = (i == numThreads - 1) ? N : (i + 1) * range;
+        long endTime = System.nanoTime();
+        double durationInSeconds = (endTime - startTime) / 1_000_000_000.0;
 
-            futures.add(executor.submit(() -> countNumbersWith9Divisors(start, end)));
-        }
-
-        int totalCount = 0;
-        for (Future<Integer> future : futures) {
-            totalCount += future.get(); // Czekaj na wynik wątku i dodaj do sumy
-        }
-
-        executor.shutdown();
-
-        long endTime = System.nanoTime(); // Zmierz czas zakończenia
-        long duration = endTime - startTime;
-
-        System.out.println("Liczba liczb z dokładnie 9 dzielnikami: " + totalCount);
-        System.out.println("Czas wykonania (ms): " + (duration / 1_000_000)); // Wyświetl czas w milisekundach
+        System.out.printf("Liczba liczb z dokładnie 9 dzielnikami: %d%n", count);
+        System.out.printf("Czas wykonania: %.3f sekundy%n", durationInSeconds);
     }
 
-    public static int countNumbersWith9Divisors(int start, int end) {
+    public static boolean[] sieveOfEratosthenes(int limit) {
+        boolean[] isPrime = new boolean[limit + 1];
+        for (int i = 2; i <= limit; i++) {
+            isPrime[i] = true;
+        }
+        for (int i = 2; i * i <= limit; i++) {
+            if (isPrime[i]) {
+                for (int j = i * i; j <= limit; j += i) {
+                    isPrime[j] = false;
+                }
+            }
+        }
+        return isPrime;
+    }
+
+    public static int countNumbersWith9DivisorsOptimized(int N) {
         int count = 0;
-        for (int i = start; i <= end; i++) {
-            if (hasExactly9Divisors(i)) {
+        int limit = (int) Math.sqrt(N);
+        boolean[] isPrime = sieveOfEratosthenes(limit);
+
+        // Liczby w formie p^8
+        for (int i = 2; i * i * i * i * i * i * i * i <= N; i++) {
+            if (isPrime[i]) {
                 count++;
             }
         }
-        return count;
-    }
 
-    public static int countDivisors(int n) {
-        int count = 0;
-
-        for (int i = 1; i * i <= n; i++) {
-            if (n % i == 0) {
-                count++;
-                if (i != n / i) {
-                    count++;
+        // Liczby w formie p^2 * q^2
+        for (int i = 2; i <= limit; i++) {
+            if (isPrime[i]) {
+                for (int j = i + 1; j <= limit; j++) {
+                    if (isPrime[j] && (long) i * i * j * j <= N) {
+                        count++;
+                    }
                 }
             }
         }
 
         return count;
-    }
-
-    public static boolean hasExactly9Divisors(int n) {
-        return countDivisors(n) == 9;
     }
 }
