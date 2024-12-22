@@ -27,16 +27,16 @@ public class FindNumbersWith9Divisors {
 
         int totalCount = 0;
         for (Future<Integer> future : futures) {
-            totalCount += future.get(); // Czekaj na wynik wątku i dodaj do sumy
+            totalCount += future.get();
         }
 
         executor.shutdown();
 
-        long endTime = System.nanoTime(); // Zmierz czas zakończenia
+        long endTime = System.nanoTime();
         long duration = endTime - startTime;
 
         System.out.println("Liczba liczb z dokładnie 9 dzielnikami: " + totalCount);
-        System.out.println("Czas wykonania (ms): " + (duration / 1_000_000)); // Wyświetl czas w milisekundach
+        System.out.println("Czas wykonania (ms): " + (duration / 1_000_000));
     }
 
     public static int countNumbersWith9Divisors(int start, int end) {
