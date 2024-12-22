@@ -1,9 +1,6 @@
 package longest.palidrom;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class LongestPalindrome {
     public static void main(String[] args) {
@@ -16,6 +13,26 @@ public class LongestPalindrome {
         System.out.println(longestPalindrome(s1));
 
     }
+
+//    public static int longestPalindrome(String s) {
+//        HashSet<Character> charSet = new HashSet<>();
+//        int length = 0;
+//
+//        for (char c : s.toCharArray()) {
+//            if (charSet.contains(c)) {
+//                charSet.remove(c);
+//                length += 2;
+//            } else {
+//                charSet.add(c);
+//            }
+//        }
+//
+//        if (!charSet.isEmpty()) {
+//            length += 1;
+//        }
+//
+//        return length;
+//    }
 
     public static int longestPalindrome(String s) {
         Map<String, Integer> mapWithLetters = new HashMap<>();
