@@ -8,21 +8,18 @@ public class ReverseLinkedList {
         ListNode reversedList = reverseList(listNode);
         System.out.println(reversedList);
 
-
     }
 
     public static ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode current = head;
-
         while (current != null) {
-            ListNode nextTemp = current.next;
+            ListNode temp = current.next;
             current.next = prev;
             prev = current;
-            current = nextTemp;
+            current = temp;
         }
-
-        return current;
+        return prev;
     }
 
     public static ListNode buildListNode(int[] arr) {
