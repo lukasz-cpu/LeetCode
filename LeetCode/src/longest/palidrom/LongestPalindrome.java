@@ -1,6 +1,9 @@
 package longest.palidrom;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class LongestPalindrome {
     public static void main(String[] args) {
@@ -58,7 +61,6 @@ public class LongestPalindrome {
         List<Integer> numbersWithoutPairs = new ArrayList<>();
 
 
-
         for (Map.Entry<String, Integer> mapWithLetter : mapWithLetters.entrySet()) {
             String mapWithLetterKey = mapWithLetter.getKey();
             Integer value = mapWithLetter.getValue();
@@ -69,7 +71,7 @@ public class LongestPalindrome {
 
         for (Map.Entry<String, Integer> stringIntegerEntry : withoutPairs.entrySet()) {
             Integer t = stringIntegerEntry.getValue();
-            if(t != 0){
+            if (t != 0) {
                 numbersWithoutPairs.add(t);
             }
         }
@@ -86,13 +88,11 @@ public class LongestPalindrome {
             result += value;
         }
 
-        if(!numbersWithoutPairs.isEmpty()){
+        if (!numbersWithoutPairs.isEmpty()) {
             result += 1;
         }
 
-
         return result;
-
 
     }
 }
