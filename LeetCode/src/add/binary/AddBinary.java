@@ -14,10 +14,10 @@ public class AddBinary {
         StringBuilder sb = new StringBuilder();
         int aLength = a.length() - 1;
         int bLength = b.length() - 1;
-        int temp = 0;
+        int carry = 0;
 
         while (aLength >= 0 || bLength >= 0) {
-            int sum = temp;
+            int sum = carry;
             if (aLength >= 0) {
                 sum += a.charAt(aLength) - '0';
                 aLength--;
@@ -28,10 +28,10 @@ public class AddBinary {
             }
 
             sb.insert(0, sum % 2);
-            temp = sum / 2;
+            carry = sum / 2;
         }
 
-        if (temp != 0) {
+        if (carry != 0) {
             sb.insert(0, 1);
         }
 
