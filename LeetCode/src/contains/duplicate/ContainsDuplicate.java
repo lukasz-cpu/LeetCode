@@ -1,8 +1,6 @@
 package contains.duplicate;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ContainsDuplicate {
@@ -30,5 +28,15 @@ public class ContainsDuplicate {
                 .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
 
         return mapWithNumbers.values().stream().anyMatch(count -> count > 1);
+    }
+
+    public static boolean containsDuplicate3(int[] nums) {
+        Set<Integer> seen = new HashSet<>();
+        for (int num : nums) {
+            if (!seen.add(num)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
