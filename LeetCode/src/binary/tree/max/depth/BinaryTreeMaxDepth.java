@@ -34,7 +34,9 @@ public class BinaryTreeMaxDepth {
         }
 
         int leftDepth = getMaxDepth(root.left);
+        System.out.println("Left depth: " + leftDepth);
         int rightDepth = getMaxDepth(root.right);
+        System.out.println("Right depth: " + rightDepth);
 
         return Math.max(leftDepth, rightDepth) + 1;
     }
