@@ -1,7 +1,9 @@
 package contains.duplicate;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ContainsDuplicate {
     public static void main(String[] args) {
@@ -20,5 +22,13 @@ public class ContainsDuplicate {
         }
 
         return false;
+    }
+
+    public static boolean containsDuplicate2(int[] nums) {
+        Map<Integer, Long> mapWithNumbers = Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
+
+        return mapWithNumbers.values().stream().anyMatch(count -> count > 1);
     }
 }
