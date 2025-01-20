@@ -39,4 +39,21 @@ public class ContainsDuplicate {
         }
         return false;
     }
+
+    public static boolean containsDuplicate4(int[] nums) {
+        return Arrays.stream(nums).distinct().count() < nums.length;
+    }
+
+    public boolean containsDuplicate5(int[] nums) {
+        Arrays.sort(nums);
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i - 1]) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }
