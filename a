@@ -1,0 +1,49 @@
+Szukanie pracy w IT dla wypierdolonych seniorów - poradnik dla leniwych
+
+Format każdego dnia
+09:00–09:30 — rozgrzewka / cel dnia
+09:30–11:00 — blok A (głębokie zanurzenie)
+11:00–11:15 — przerwa
+11:15–13:00 — blok B (praktyka)
+13:00–14:00 — przerwa obiadowa
+14:00–15:30 — blok C (praktyczne zadanie)
+15:30–15:45 — przerwa
+15:45–17:15 — blok D (testy / integracja / mock)
+17:15–18:00 — wrap-up: zapisy, checklist, commit do repo
+Uwaga: trzymaj 2–3 krótkie przerwy w każdej sesji (np. 5–10 min co 50–60 min).
+
+Dzień 1 - Ocena i ustawienie środowiska + roadmapa
+Dzień 2 - Java core: Collections, JVM, memory
+Dzień 3 - Java concurrency & performance
+Dzień 4 - Spring (Core, Boot, DI, lifecycle, autoconfig)
+Dzień 5 - Spring Data, Spring Security, REST
+Dzień 6 - PostgreSQL (schematy, indeksy, wydajność)
+Dzień 7 - Elasticsearch (mapping, analzyers, query DSL)
+Dzień 8 - AWS podstawy (S3, IAM, VPC concept)
+Dzień 9 - AWS integracje (SQS, SNS, Lambda)
+Dzień 10 - NoSQL: DynamoDB + wzorce
+Dzień 11 - Docker & CI/CD + deployment
+Dzień 12 - System design #1 (skala, cache, db sharding)
+Dzień 13 - System design #2 (search + ES + eventual consistency)
+Dzień 14 - Mocki techniczne + behavioral + final review
+
+Konkretne zadania kodowe (do wykonania/przećwiczenia)
+- LRU cache - O(1) get/put (LinkedHashMap lub własna implementacja z DLL + hashmap).
+- Producer/Consumer - implementacja z BlockingQueue + test obciążeniowy.
+- SQL - zapytanie z JOIN + agregacją i EXPLAIN ANALYZE; naprawienie zapytania by używało indeksu.
+- Elasticsearch - stwórz index z custom analyzer, wykonaj match + highlight.
+- AWS pattern - zaimplementuj idempotent consumer dla SQS (idempotency key storage w DynamoDB).
+- System design whiteboard - zaprojektuj „search as a service” + uzasadnij wybory.
+
+Check-lista przed rozmową (technical & soft)
+- Repo z 3-5 projektami + README z uruchomieniem (docker-compose).
+- Przygotowane 6 STAR stories.
+- Środowisko gotowe do pair programming (IDE, kontenery uruchomione).
+- CV spójne z LinkedIn i projektami.
+- Backup: gotowe linki do kodu, issues, PRs którymi możesz się pochwalić.
+- Zestaw pytań do rekrutera (team, culture, roadmap, code review process).
+
+Ostatnie dni (co robić 48–24h przed rozmową)
+- 48h: lekki przegląd notatek, 1 full mock (kod + design).
+- 24h: tylko quick review (STAR stories, 3 techniczne tematy), sen i regeneracja.
+- Dzień rozmowy: rano rozgrzewka - 3 leetcode medium (3x15 min), przegląd 2-3 notatek, potem spokojnie.
