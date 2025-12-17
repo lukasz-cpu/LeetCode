@@ -19,7 +19,7 @@ public class MeetingRooms {
                 return false;
             }
         }
-        
+
         return true;
     }
 }
