@@ -13,19 +13,15 @@ public class ProductOfArrayExceptSelf {
         int zeroCount = 0;
         int product = 1;
 
-        // Pierwsze przejście: policz produkt elementów niezerowych i liczbę zer
         for (int num : nums) {
             if (num == 0) {
                 zeroCount++;
-                if (zeroCount > 1) return result;   // dwa zera → same zera
+                if (zeroCount > 1) return result;
             } else {
                 product *= num;
             }
         }
 
-        System.out.println(product);
-        
-        // Drugie przejście: zbuduj wynik
         for (int i = 0; i < n; i++) {
             if (nums[i] == 0) {
                 result[i] = (zeroCount == 1) ? product : 0;
