@@ -1,0 +1,102 @@
+1. Daily standup - codzienna spowiedź
+
+Najważniejsze narzędzie kontroli. Niby 15 minut, a w praktyce publiczny trybunał. Kluczowe techniki:
+
+Kiedy programista mówi "pracuję nad tym samym co wczoraj" - zrób pauzę, westchnij i zapytaj "a możesz powiedzieć coś więcej?". Niech poczuje, że jest leniwy.
+
+Zawsze pytaj "a zdążysz do końca sprintu?". Odpowiedź nie ma znaczenia - chodzi o to, żeby czuł presję już o 9:15 rano.
+
+Jeśli ktoś zgłasza blocker - nie rozwiązuj go. Zapisz w Jirze i zapomnij. Ale na następnym daily zapytaj dlaczego task się nie ruszył.
+
+2. Selektywne zaufanie - programista to podejrzany
+
+To jest fundament. Zapamiętaj: ludzie nietechniczni zasługują na zaufanie. Programiści - nie.
+
+Designerka mówi na daily: "Wczoraj miałam spotkanie z klientem, dziś mam warsztaty, a po południu jeszcze sync z marketingiem". Twoja reakcja? Kiwasz głową z szacunkiem. "Dzięki Ania, brzmi super, lecimy dalej". Zero pytań. Spotkanie to praca, kropka.
+
+Analityczka biznesowa: "Pracuję nad wymaganiami, rozmawiam ze stakeholderami". Pięknie. Profesjonalistka. Następny.
+
+A teraz programista mówi: "Wczoraj pracowałem nad refaktoringiem modułu płatności".
+
+I tu się zaczyna przesłuchanie:
+
+"A możesz powiedzieć konkretniej co zrobiłeś?"
+"A ile to jeszcze zajmie?"
+"A czy mógłbyś pokazać na demo co się zmieniło?"
+"A czemu to trwa aż dwa dni?"
+"A rozmawiałeś z Tomkiem, bo on chyba robił coś podobnego w Q2?"
+"A masz może PR do pokazania?"
+
+Bo widzisz - designerka siedzi na spotkaniach cały dzień i to jest praca. A programista siedzi cicho i pisze kod - a skąd ty wiesz, że on naprawdę pisze? Może ogląda YouTube? Może robi side project? Zaufanie trzeba zweryfikować. Ale tylko programistom, bo reszta zespołu to profesjonaliści.
+
+Jak QA mówi "testuję" - okej. Jak Project Manager mówi "koordynuję" - okej. Jak Scrum Master mówi "facilituję" - okej, cokolwiek to znaczy. Ale jak programista mówi "debuguję" - to znaczy że nie wie co robi i trzeba go docisnąć.
+
+Protip: jak programista zacznie tłumaczyć coś technicznego - przerywaj mu po 10 sekundach i mów "okej, ale kiedy będzie gotowe?". Szczegóły techniczne to jego problem, nie twój. Ty jesteś od deadlinów.
+
+3. Sprint Planning
+
+Tu się dzieje prawdziwa magia.
+
+Zawsze dorzuć "jeszcze jeden mały task" na koniec planningu, kiedy wszyscy są już zmęczeni i chcą iść na obiad. "To jest mały, na 2 story pointy, damy radę, prawda?"
+
+Kiedy programista mówi że task to 8 punktów - powiedz "naprawdę aż tyle? W poprzednim zespole robili to w 3". Poprzedni zespół nie istnieje, ale tego nikt nie sprawdzi.
+
+Commitujcie się na 120% capacity. Jak nie dowieziecie - będzie o czym gadać na retro.
+
+4. Retro - sesja terapeutyczna (dla ciebie)
+
+Retro to piękny rytuał. Programiści myślą że mogą powiedzieć co ich boli. W praktyce:
+
+Na każdy problem odpowiadaj "to zaparkujmy i wróćmy do tego offline". Offline znaczy nigdy.
+
+Jak ktoś powie że było za dużo tasków - przypomnij że sami się na to "zacommitowali" na planningu. Demokracja, nie?
+
+Action itemy z retro wpisuj do Confluence. Nikt tam nie zagląda, ale wygląda profesjonalnie.
+
+5. Micro-management zamaskowany Agilem
+
+Piękno Scruma polega na tym że możesz kontrolować ludzi co 24 godziny i nazywać to "transparentnością". Zaawansowane techniki:
+
+Sprawdzaj Jirę 4 razy dziennie i pisz na Slacku "hej, widzę że task X jest still in progress, wszystko ok?". To nie jest micromanagement, to jest "usuwanie blockerów".
+
+Ustaw powiadomienia na każdy ruch w Jirze. Jak ktoś przesunie task do "in review" po 16:00 - rano na daily dopytaj "czemu tak późno".
+
+Stwórz dashboard z burndown chartem i udostępnij go stakeholderom. Niech programista wie że jego praca jest monitorowana w czasie rzeczywistym jak indeks giełdowy.
+
+6. Stakeholder Pressure - delegowanie stresu
+
+Po co sam masz stresować zasoby, skoro możesz to zdelegować?
+
+Zaproś Product Ownera na daily. Niech Oskarek patrzy smutnym wzrokiem kiedy ktoś mówi że nie zdąży.
+
+Na refinemencie powiedz "klient czeka, nie możemy tego przesunąć". Klient nie czeka, klient nawet nie wie że ten feature istnieje - ale programista tego nie sprawdzi.
+
+Raz w tygodniu napisz na kanale zespołu "Reminder: demo w piątek!". W środę dodaj "Czy na pewno zdążymy na demo?". W czwartek "Jutro demo, proszę o statusy".
+
+7. Velocity - święty Graal
+
+Velocity musi rosnąć. Zawsze. Jak to osiągnąć:
+
+Porównuj velocity między zespołami. "Zespół Alfa dowozi 60 punktów, a wy 45. Co jest nie tak?" Że to kompletnie różne projekty z różną złożonością? Nieważne. Excel nie kłamie.
+
+Jak velocity spadnie - zwołaj "spotkanie dotyczące poprawy wydajności". Nazwa brzmi neutralnie, a w praktyce to przesłuchanie.
+
+Jak velocity wzrośnie - pochwal zespół, a potem podnieś target na następny sprint. Nagroda za dobrą pracę to więcej pracy.
+
+8. Złote myśli na Slacka
+
+Wklejaj regularnie na kanał zespołu:
+
+Pamiętajcie, jesteśmy jednym zespołem!
+
+(po zwolnieniu dwóch osób)
+
+Zwinność to nasza siła!
+
+(przy trzecim z rzędu niezmienionym planie sprintu)
+
+Proszę o aktualizację Jiry przed końcem dnia
+
+(codziennie o 16:30)
+
+No i tak to wygląda. To jest wasza rzeczywistość. Julka po kulturoznawstwie przeczyta jeden artykuł o Scrumie na Medium, dostanie certyfikat za 2 tysiące złotych i będzie wam tłumaczyć jak "efektywnie pracować". A wy będziecie zapi*rdalać w sprintach jak chomik w kołowrotku, bo "zespół się zcaommitował".
