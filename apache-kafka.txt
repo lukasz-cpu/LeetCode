@@ -1,0 +1,9 @@
+no standardowe czym jest itp, partycje, brokery, kolejnosc w partycji, at least once, rebalancing konsumentów,  offsety, klucz partycji
+trochę o patterny mikoserwisowe z kolejkami, oni bardzo dużo kafki używają
+jakiś outbox, indempotentne przetwarzanie wiadomości
+co mnie bardzo mocno zdziwiło (2 ludzi mnie pytało), jeden mnie mocno pytał o bebechy springa
+dawno nikt mnie nie pytał o scopy beanow, ale chyba mieli jakąś liste pytań na rozgrzewkę z chata xD
+potem już były praktyczniejsze problemy
+a i szedłem jako kontraktor więc miałem jedną rozmowę ale 2h jakoś, a nie osobno SD i teorie
+jedną techniczną i potem jeszcze takie zwykłe miękkie
+w kafce z wydajności to batchowe branie wiadomości jak działa
